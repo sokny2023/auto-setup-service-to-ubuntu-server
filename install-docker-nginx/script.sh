@@ -56,3 +56,7 @@ sudo systemctl enable nginx
 
 # Output success message
 echo "Docker, Docker Compose, and Nginx installation complete!"
+
+sudo docker --version
+sudo docker-compose --version
+sudo nginx -v
