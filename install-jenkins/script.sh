@@ -21,7 +21,7 @@ java -version
 
 # Add Jenkins repository key
 echo "Adding Jenkins repository key..."
-curl -fsSL https://pkg.jenkins.io/debian/jenkins.io.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
 
 # Add Jenkins repository
 echo "Adding Jenkins repository..."
@@ -56,3 +56,6 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 # Display access information
 echo "Access Jenkins at: http://$PUBLIC_IP:8080"
+
+# check Jenkins version
+jenkins --version
